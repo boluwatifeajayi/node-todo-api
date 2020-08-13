@@ -18,20 +18,20 @@ console.log(obj);
     console.log('connected to mongo db server');
 
     //insert into database
-    //const db = client.db('TodoApp')
+    const db = client.db('TodoApp')
 
-    //  db.collection('Todo').insertOne({
+     db.collection('Todo').insertOne({
         
-    //     text: 'Something To Do',
-    //     completed: false
-    // }, (err, result) =>{
-    //     if (err) {
-    //         return console.log('Unable to insert Todo');
-    //     }
+        text: 'Something To Do',
+        completed: false
+    }, (err, result) =>{
+        if (err) {
+            return console.log('Unable to insert Todo');
+        }
 
-    //     console.log(JSON.stringify(result.ops[0]._id.getTimestamp(), undefined, 2));
-    //     client.close();
-    // });
+        console.log(JSON.stringify(result.ops[0]._id.getTimestamp(), undefined, 2));
+        client.close();
+    });
 
    client.close();
 

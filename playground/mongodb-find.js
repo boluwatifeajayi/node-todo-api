@@ -12,7 +12,7 @@ const {
              }
              console.log('connected to mongo db server');
              const db = client.db('TodoApp')
-            //fetch todos
+            //fetch 
             //  db.collection('Todos').find(/*{completed: false}*/).toArray().then((docs) => {
             //     console.log('Todos');
             //     console.log(JSON.stringify(docs, undefined, 2));
@@ -22,7 +22,7 @@ const {
             //  });
 
             //count todos
-            db.collection('Todos').find( /*{completed: false}*/ ).count().then((count) => {
+            db.collection('Todo').find( /*{completed: false}*/ ).count().then((count) => {
                 console.log(`Todos counts: ${count}`);
                 //console.log(JSON.stringify(docs, undefined, 2));
             }, (err) => {
